@@ -131,6 +131,7 @@ Abrir el navegador y en la barra de busqueda ponemos `localhost:8978` o el puert
     ![alt text](imagen-7.png)
 
 - Luego testea la conexion
+
     ![alt text](imagen-8.png)
 
 - Click en create, proporcione los datos para iniciar la conexion y ya podra navegar dentro de su base de datos
