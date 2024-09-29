@@ -1,0 +1,29 @@
+ervices:
+  mariadb:
+    image: mariadb:11
+    container_name: my_mariadb_container
+    environment:
+      MARIADB_USER: ${MARIADB_USER}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+    ports:
+      - "3306:3306"
+    networks:
+      - mi_red
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+  dbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: dbeaver_caontainer
+    ports:
+      - "8978:8978"
+    networks:
+      - mi_red
+
+volumes:
+  mariadb_data:
+
+networks:
+  mi_red:
